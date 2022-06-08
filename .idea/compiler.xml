@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Restaurant_project -Student version" />
         <module name="Restaurant_project" />
+        <module name="Lawange_Rohit_C3_Project" />
       </profile>
     </annotationProcessing>
   </component>
