@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -69,7 +70,12 @@ class RestaurantTest {
     @Test
     public void select_item_from_list_should_return_order_cost(){
         //the test case will fail, as there is no method for the given below name
-        List<Item> selectedItems = null;
+        List<String> selectedItems = new ArrayList<>();
+        selectedItems.add("Sweet corn soup");
+        selectedItems.add("Vegetable lasagne");
         int totalCost = restaurant.getTotalCost(selectedItems) ;
+
+        //388 because 269+119 : we have set this values in the setUp method
+        assertEquals(388,totalCost);
     }
 }
